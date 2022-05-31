@@ -3,6 +3,9 @@ smoke_test:
    - image: alpine:latest
  steps:
    - run: apk add --update curl
+   - checkout
+   - add_ssh_keys:
+          fingerprints: ["f9:b5:94:9a:a0:6e:59:d3:97:1c:b6:4c:a0:3c:ec:8a"] 
    - run:
        name: smoke test
        command: |
@@ -16,7 +19,7 @@ smoke_test:
          fi
 workflows:
   # Name the workflow "welcome"
-  my_workflow:
+  smoketest_workflow:
     # Run the welcome/run job in its own container
     jobs:
       # - welcome/run
