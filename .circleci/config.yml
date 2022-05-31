@@ -14,7 +14,7 @@ commands:
 jobs:
  smoke_test:
   docker:
-    - image: alpine:latest
+    - image: circleci/python:3.8
   steps:
     - run: apk add --update curl
     - checkout
