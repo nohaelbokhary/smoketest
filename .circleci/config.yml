@@ -22,5 +22,5 @@ workflows:
   smoketest_workflow:
     # Run the welcome/run job in its own container
     jobs:
-      # - welcome/run
+   
       - smoke_test
